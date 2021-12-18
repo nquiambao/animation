@@ -1,0 +1,386 @@
+/* DMIT2033 - ANIMATION */
+
+.animal-holder {
+	animation: hop 0.4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+}
+
+.lion {
+	animation: walkleft 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	transform: scaleX(-1);
+}
+
+.mouse {
+	animation: walkright 8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	transform: scaleX(-1);
+}
+
+@keyframes walkleft {
+	3% {
+		transform: translate(0) scaleX(1);
+	}
+
+	50% {
+		transform: translate(-400%) scaleX(1);
+	}
+
+	53% {
+		transform: translate(-400%) scaleX(-1);
+	}
+}
+
+@keyframes walkright {
+	3% {
+		transform: translate(0) scaleX(1);
+	}
+
+	50% {
+		transform: translate(400%) scaleX(1);
+	}
+
+	53% {
+		transform: translate(400%) scaleX(-1);
+	}
+}
+
+@keyframes hop {
+	0%, 100% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-5px);
+	}
+}
+
+@keyframes drop {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    70% {
+        transform: rotateX(20deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+nav {
+	animation: drop 0.4s ease-in-out forwards;
+	transform-origin: top center;
+}
+
+
+/* step 1: Choose a font-family (all font pairings) [font-family]*/
+
+/* step 2: Set default font-size [font-size]*/
+
+/* step 3: Choose grid unit size [line-height]*/
+
+/* step 4: Display a vertical grid */
+
+/* step 5: Choose your typographic scale */
+/* 12, 14, 16, 18, 24, 36, 48, 60, 72, 96 */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	line-height: 1.5;
+	/* background-image: linear-gradient(#0ff 1px, transparent 1px);
+    background-size: auto 24px; */
+}
+
+header {
+	padding: 3.6rem 0 0;
+	background-color: #312c2b;
+	text-align: center;
+	color: #d8d8d8;
+}
+
+h1 {
+	font-family: 'Cinzel Decorative', serif;
+	font-size: 6rem;
+	line-height: 9.6rem;
+}
+
+h1 span {
+	font-size: 7.2rem;
+	line-height: 12rem;
+}
+
+.new-line {
+	display: block;
+	font-family: 'Rowdies', sans-serif;
+	font-size: 2.4rem;
+	line-height: 4.8rem;
+	letter-spacing: 1rem;
+	text-transform: uppercase;
+	margin-top: -24px;
+}
+
+.navigation {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 auto;
+	background-color: #312c2b;
+	padding: 1.5rem;
+}
+
+.navigation:hover .toggle p {
+	background-color: #654a3e;
+}
+
+.toggle {
+	padding-bottom: 0.5rem;
+}
+
+.toggle p {
+	font-family: 'Karla', sans-serif;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	background-color: #534843;
+	border-radius: 10px;
+	transition: 0.2s ease-out;
+}
+
+.toggle p:hover {
+	background-color: #654a3e;
+}
+
+.toggle:hover + nav,
+nav:hover {
+	display: block;
+	opacity: 1;
+}
+
+nav {
+	top: 6.3rem;
+	right: 0;
+	margin: 0 auto;
+	padding-bottom: 0.2rem;
+	position: absolute;
+	background-color: #312c2b;
+	display: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px #00000030;
+	overflow: hidden;
+	opacity: 0;
+}
+
+nav li a {
+	font-size: 1.8rem;
+	font-family: 'Karla', sans-serif;
+	text-decoration: none;
+	color: #c19556;
+	white-space: nowrap;
+	padding: 2.4rem 2rem;
+	display: block;
+	transition: 0.2s ease-out;
+	position: relative;
+}
+
+nav li a::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #966c4b;
+	transform: scale(0);
+	opacity: 0;
+	transition: 0.2s ease-out;
+}
+
+nav li a:hover {
+	color: #966c4b;
+}
+
+nav li a:hover::after {
+	transform: scale(1);
+	opacity: 1;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.sticky + main {
+	padding-top: 7rem;
+}
+
+main {
+	width: 100%;
+}
+
+section {
+	height: 100vh;
+	padding-top: 24rem;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+}
+
+.fable-one {
+	background-color: #9e7d87;
+	color: #312422;
+	padding-top: 30rem;
+}
+
+.fable-one h2 {
+	font-family: 'Sansita', sans-serif;
+	font-size: 3.6rem;
+	line-height: 4.8rem;
+	display: flex;
+	justify-content: space-around;
+	width: 840px;
+	margin: 0 auto;
+}
+
+.fable-one .cat,
+.fable-one .birds {
+	font-size: 6rem;
+	line-height: 9.6rem;
+	color: #f3eaed;
+}
+
+.fable-one .cat {
+	margin-top: -72px;
+}
+
+.fable-one .birds {
+	margin-top: 24px;
+}
+
+.fable-one p {
+	font-family: 'Caladea', serif;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	width: 540px;
+	margin: 24px auto 0 auto;
+}
+
+.fable-one p:last-child {
+	color: #f3eaed;
+}
+
+.fable-two {
+	background-color: #8691b1;
+	position: relative;
+}
+
+.fable-two h2 {
+	font-family: 'Alatsi', sans-serif;
+	font-size: 7.2rem;
+	line-height: 12rem;
+	color: #121530;
+}
+
+.column {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.fable-two p {
+	font-family: 'Karla', sans-serif;
+	color: #1f3041;
+	padding: 0;
+	width: 304px;
+	margin: 0 30px;
+}
+
+.images {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	gap: 2rem;
+}
+
+.images img {
+	width: 100px;
+}
+
+.fable-three {
+	background-color: #9caf83;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.fable-three h2 {
+	font-family: 'Beth Ellen', cursive;
+	font-size: 6rem;
+	line-height: 9.6rem;
+	color: #3b2d24;
+	margin-right: 100px;
+	text-align: right;
+	width: 460px;
+}
+
+.fable-three p {
+	font-family: 'IM Fell DW Pica', serif;
+	color: #273321;
+	padding: 24px;
+	width: 337px;
+	background-color: #d5dfb8;
+	margin-top: 96px;
+	border-radius: 3px;
+	border-bottom-right-radius: 100px;
+	box-shadow: -5px 5px 5px 0 #80967b;
+}
+
+.fable-four {
+	background-color: #c08e60;
+	color: #33261f;
+}
+
+.fable-four h2 {
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size: 6rem;
+	line-height: 9.6rem;
+}
+
+.fable-four p {
+	font-family: 'Sulphur Point', sans-serif;
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	margin: 48px auto 0 auto;
+	text-align: center;
+	width: 540px;
+}
+
+.fable-four span {
+	font-size: 2.4rem;
+	line-height: 4.8rem;
+	font-style: italic;
+	font-weight: bold;
+	color: #f1e1d3;
+	background-color: #443d39;
+	padding: 12px;
+}
